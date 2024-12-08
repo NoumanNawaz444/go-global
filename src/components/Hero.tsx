@@ -209,7 +209,7 @@ const Hero = () => {
                                 Empowering students to achieve their global education goals.
                             </p>
                             <a
-                                href="#services"
+                                href="#services" 
                                 className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-800 rounded-full lg:mt-16 hover:scale-95"
                             >
                                 View Our Services
