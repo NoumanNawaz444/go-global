@@ -6,12 +6,12 @@ import React, { useState } from "react";
 import heroImg from "@/images/hero-img.png"
 
 // Navbar Component
-const Navbar = () => {
+export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     return (
-        <header className="bg-[#FCF8F1] bg-opacity-30">
+        <header className="bg-[#FCF8F1] bg-opacity-30 sm:w-4/5 mx-auto w-full">
             <div className="px-4 mx-auto sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 className="text-base text-black transition-all duration-200 hover:text-opacity-80 focus:outline-none flex justify-center items-center"
                             >
-                                <span>Destinations</span>
+                                <span>Study-Abroad</span>
                                 <svg
                                     className="inline w-4 h-4 ml-1"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -73,16 +73,16 @@ const Navbar = () => {
                             </button>
                             {isDropdownOpen && (
                                 <div className="absolute left-0 z-10 mt-2 bg-white border rounded-lg shadow-lg w-48">
-                                    <Link href="/destinations/usa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <Link href="/study-abroad/usa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         USA
                                     </Link>
-                                    <Link href="/destinations/canada" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <Link href="/study-abroad/canada" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         Canada
                                     </Link>
-                                    <Link href="/destinations/uk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <Link href="/study-abroad/uk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         UK
                                     </Link>
-                                    <Link href="/destinations/australia" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <Link href="/study-abroad/australia" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         Australia
                                     </Link>
                                 </div>
@@ -141,7 +141,7 @@ const Navbar = () => {
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             className="block text-base text-black transition-all duration-200 hover:text-opacity-80 focus:outline-none"
                         >
-                            Destinations
+                            Study-Abroad
                             <svg
                                 className="inline w-4 h-4 ml-1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -159,16 +159,16 @@ const Navbar = () => {
                         </button>
                         {isDropdownOpen && (
                             <div className="mt-2 bg-white border rounded-lg shadow-lg">
-                                <Link href="/destinations/usa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <Link href="/study-abroad/usa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     USA
                                 </Link>
-                                <Link href="/destinations/canada" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <Link href="/study-abroad/canada" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     Canada
                                 </Link>
-                                <Link href="/destinations/uk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <Link href="/study-abroad/uk" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     UK
                                 </Link>
-                                <Link href="/destinations/australia" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <Link href="/study-abroad/australia" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     Australia
                                 </Link>
                             </div>
@@ -196,7 +196,6 @@ const Navbar = () => {
 const Hero = () => {
     return (
         <div className="bg-white">
-            <Navbar />
             <section className="bg-blue-500 rounded-lg sm:rounded-br-[250px] rounded-br-[150px] m-3 bg-opacity-30 py-10 sm:py-16 lg:py-24">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">

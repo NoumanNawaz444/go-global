@@ -19,3 +19,57 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* src/App.css */
+.embla {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.embla__container {
+  display: flex;
+  width: 100%;
+}
+
+.embla__slide {
+  min-width: calc(100% / 4 - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f0f0f0;  */
+  margin: 8px;
+  height: auto;
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* responsiveness */
+@media (max-width: 1200px) {
+  .embla{
+    width: 90%;
+    margin: 0 auto;
+  }
+ .embla__slide {
+    min-width: calc(100% / 3 - 16px);
+  }
+}
+
+@media (max-width: 800px) {
+  .embla{
+    width: 95%;
+    margin: 0 auto;
+  }
+ .embla__slide {
+   min-width: calc(100% / 2 - 16px);
+  }
+}
+@media (max-width: 500px) {
+ .embla__slide {
+   min-width: calc(100% - 16px);
+  }
+}
